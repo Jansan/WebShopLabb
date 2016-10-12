@@ -1,0 +1,25 @@
+﻿<div class="col-md-12">
+    <div class="col-md-12">
+        <h1 ng-bind="title"></h1>
+
+        <button type="button"
+                class="btn btn-success"
+                data-toggle="modal"
+                data-target="#addProductsModal">
+            Add Products
+           </button>
+        </div>
+        <div class="col-md-4" ng-repeat="product in products track by $index">
+            <div class="col-md-12 article">
+                <a href="" ng-click="go('/Product/Detail/' + product.id)"><h1 ng-bind="product.name"></h1></a>
+                <h2 ng-bind="product.price | currency: 'SEK '"></h2>
+                <p ng-bind="product.description"></p>
+                <button class="btn btn-danger" ng-click="removeProduct($index)"><i class="glyphicon glyphicon-trash"></i></button>
+                <button class="btn btn-success" ng-click="addToCart(product)">Add To Cart</button>
+            </div>
+        </div>
+
+</div>
+
+<div ng-include="'Views/Partials/AddProductsModal.html'"></div>
+

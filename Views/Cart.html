@@ -1,0 +1,25 @@
+﻿<h1 ng-bind="title"></h1>
+<table class="table table-responsive">
+    <thead>
+        <tr>
+            <th>Product Name</th>
+            <th>Product Image</th>
+            <th>Product Price</th>
+            <th>Product Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="cartProduct in cartProducts track by $index">
+            <td ng-bind="cartProduct.name"></td>
+            <td ng-bind="cartProduct.image"></td>
+            <td ng-bind="cartProduct.price"></td>
+            <td ng-bind="cartProduct.description"></td>
+            <td><button class="btn btn-danger" ng-click="removeCart($index)"><i class="glyphicon glyphicon-trash"></i></button></td>
+            
+        </tr>
+
+    </tbody>
+
+</table>
+
+<div ng-include="Views/Partials/AddProductsModal.html"></div>

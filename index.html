@@ -2,12 +2,13 @@
 <html ng-app="webShopModule">
 <head>
     <title>WebShop</title>
+    <base href="/" />
 	<meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="CSS/master.css" rel="stylesheet" />
-    <base href="/" />
+    
 </head>
-<body ng-controller="MainController">
+<body ng-controller="MainController" class="container-fluid">
 
     <header ng-include="'Views/partials/navbar.html'"></header>
 
@@ -35,6 +36,9 @@
     <!--Controller-->
     <script src="Scripts/Controllers/main.controller.js"></script>
     <script src="Scripts/Controllers/home.controller.js"></script>
-
+    <script src="Scripts/Controllers/cart.controller.js"></script>
+    <script src="Scripts/Controllers/products.controller.js"></script>
+    <script src="Scripts/Controllers/product.controller.js"></script>
+    
 </body>
 </html>

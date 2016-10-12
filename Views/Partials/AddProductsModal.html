@@ -1,0 +1,56 @@
+﻿<div id="addProductsModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!--Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    &times;
+                </button>
+                <h4 class="modal-title">Add Product</h4>
+            </div>
+            <div class="modal-body">
+                <form ng-submit="addProduct()">
+                    <div class="form-group">
+                        <label for="newProducts-name">Product Name:</label>
+                        <input type="text"
+                               class="form-control"
+                               ng-model="newProducts.name"
+                               placeholder="Name..." />
+                    </div>
+                    <div class="form-group">
+                        <label for="newProducts-name">Product Image:</label>
+                        <input type="file"
+                               class="form-control"
+                               ng-model="newProducts.image"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="newProducts-price">Product Price:</label>
+                        <input type="text"
+                                  class="form-control"
+                                  ng-model="newProducts.price"
+                                  placeholder="Price..." cols="4" rows="5" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="newProduct-description">Description:</label>
+                        <textarea type="text"
+                                  class="form-control"
+                                  ng-model="newProducts.description"
+                                  placeholder="Description..." cols="4" rows="5"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        Add Product
+                    </button>
+                </form>
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
